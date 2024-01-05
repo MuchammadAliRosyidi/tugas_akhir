@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135544211699",
+    "project_id": "tugas-akhir-8dd50",
+    "storage_bucket": "tugas-akhir-8dd50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135544211699:android:6cd1cc13381ea9cb0c4f86",
+        "android_client_info": {
+          "package_name": "com.example.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhpiM5ndHNYzyNSgeRHS5gJHSC-Js2-s0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

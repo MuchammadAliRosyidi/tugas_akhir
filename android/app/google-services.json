@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628255971234",
+    "project_id": "proyek-akhir-9c8f8",
+    "storage_bucket": "proyek-akhir-9c8f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628255971234:android:0709ac130b8c7384d244fb",
+        "android_client_info": {
+          "package_name": "com.example.tugas_akhir"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh4B0vWzW3xAnD-D3QbUHFrEU9sBf_iJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
