@@ -22,20 +22,20 @@ class home extends StatelessWidget {
           ),
           backgroundColor: Colors.blueGrey,
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              margin: EdgeInsets.all(20),
-              child: Text(
-                "Pilih Menu",
-                style: header2,
-                textAlign: TextAlign.center,
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                padding: EdgeInsets.all(20),
+                margin: EdgeInsets.all(20),
+                child: Text(
+                  "Pilih Menu",
+                  style: header2,
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            Expanded(
-              child: StreamBuilder<QuerySnapshot>(
+              StreamBuilder<QuerySnapshot>(
                 stream: produk.orderBy('nama', descending: false).snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
@@ -56,16 +56,24 @@ class home extends StatelessWidget {
                   }).toList();
 
                   return ListView.builder(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
                     itemCount: makananList.length,
                     itemBuilder: (context, index) {
                       return Container(
                         padding: EdgeInsets.all(10),
                         child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Image.asset(
-                              "assets/${makananList[index].gambar}",
-                              width: 200,
-                              height: 150,
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Container(
+                                child: Image.asset(
+                                  "assets/${makananList[index].gambar}",
+                                  width: 200,
+                                  height: 150,
+                                ),
+                              ),
                             ),
                             SizedBox(width: 10),
                             Expanded(
@@ -111,10 +119,11 @@ class home extends StatelessWidget {
                   );
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
